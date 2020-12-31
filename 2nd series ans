@@ -1,0 +1,224 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled5.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPEMhkv4mh4zOqJHy+wy588",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/RanjanaJanardhanan/Class-Assignment-1---Getting-Started-with-Python-Programming/blob/master/2nd%20series%20ans\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aWAcYSlhj0Ot"
+      },
+      "source": [
+        "QUESTION 3"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TchUraXej4JK",
+        "outputId": "99fdd519-a318-43c5-ec89-c9acd4a82da7"
+      },
+      "source": [
+        " \n",
+        "def Remove(duplicate):\n",
+        " \n",
+        "    final_list = []\n",
+        " \n",
+        "    for num in duplicate:\n",
+        " \n",
+        "        if num not in final_list:\n",
+        " \n",
+        "            final_list.append(num)\n",
+        " \n",
+        "    return final_list\n",
+        " \n",
+        "duplicate = [5, 10, 5, 20,  10, 25]\n",
+        " \n",
+        "print(Remove(duplicate))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[5, 10, 20, 25]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DXGPyEM3l1-8"
+      },
+      "source": [
+        "QUESTION 1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AZsDe_mBuJdT",
+        "outputId": "86d5076b-0d81-414b-b50b-a765504920e7"
+      },
+      "source": [
+        "my_dictionary={'a':1, 'b':3, 'c':1, 'd':2}\r\n",
+        "lookup_value=1\r\n",
+        "all_keys=[]\r\n",
+        "for key,value in my_dictionary.items() :\r\n",
+        "    if (value==lookup_value):\r\n",
+        "        all_keys.append(key)\r\n",
+        "print (all_keys)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['a', 'c']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "KdGIgbc8ocBf"
+      },
+      "source": [
+        "QUESTION 2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "abuMC8Nk27AF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "99ec54de-d0c4-4471-ce80-b4aded7e4b54"
+      },
+      "source": [
+        " \n",
+        "class Rectangle:\n",
+        "    def __init__(self,width=0,height=0,corner_x=0,corner_y=0):\n",
+        "        self.width = width\n",
+        "        self.height = height\n",
+        " \n",
+        "    def area(self):\n",
+        "      print(\"Area:\",self.height*self.width)\n",
+        " \n",
+        "    def perimeter(self):\n",
+        "      print(\"Perimeter:\", 2*(self.height+self.width))\n",
+        " \n",
+        "robj = Rectangle(10,5)\n",
+        "robj.area()\n",
+        "robj.perimeter()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Area: 50\n",
+            "Perimeter: 30\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Zzve6CzjyfdD"
+      },
+      "source": [
+        "QUESTON 4"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hFJZDE513Ks5",
+        "outputId": "f43e9135-5971-4d36-90a4-648344ad68a4"
+      },
+      "source": [
+        " \n",
+        "class Rectange:\n",
+        "    def __init__(self,width=0,height=0,corner_x=0,corner_y=0):\n",
+        "        self.width = width\n",
+        "        self.height = height\n",
+        "        self.corner_x = corner_x\n",
+        "        self.corner_y = corner_y\n",
+        " \n",
+        "    def center(self):\n",
+        "      input_x_c = input(\"Enter x_c\")\n",
+        "      input_y_c = input(\"Enter y_c\")\n",
+        "      input_x =int(input_x_c)\n",
+        "      x_c = self.corner_x+self.width/2\n",
+        "      y_c = self.corner_y+self.height/2\n",
+        " \n",
+        "      print('Center: (%g , %g)' % (x_c,y_c))\n",
+        " \n",
+        "    def area(self):\n",
+        " \n",
+        "      print(\"Area:\",self.height*self.width)\n",
+        " \n",
+        "    def perimeter(self):\n",
+        "      print(\"Perimeter:\", 2*(self.height+self.width))\n",
+        " \n",
+        "robj = Rectange(10,5)\n",
+        " \n",
+        "robj.center()\n",
+        "robj.area()\n",
+        "robj.perimeter()"
+      ],
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter x_c15\n",
+            "Enter y_c20\n",
+            "Center: (5 , 2.5)\n",
+            "Area: 50\n",
+            "Perimeter: 30\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
